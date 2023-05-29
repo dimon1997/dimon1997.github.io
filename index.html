@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino</title>
+    <link rel="icon" type="image/x-icon" href="image/favIconTitle/casino-chip.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="headerAndTimerBlock">
+        <div id="welcomeMessage">
+            <p>Поставте ставку для начала игры</p>
+        </div>
+        <div id="timerSpin">
+            <div>
+                <div>До окончания ставок: </div>
+                <div id="timer"></div>
+                <button onclick=stopTimerAndSpinWhell()>Покрутить колесо</button>
+            </div>
+        </div>
+        <div id="waitingResult">
+            <p>Ожидайте результат</p>
+        </div>
+
+    </div>
+    <div id="wrapperGamePlace">
+        <div id="inputWheelInGame"></div>
+        <div id="gamePlace">
+            <div class="leftGamePlaceBlock">
+                <div id="0" class="cell zero" onclick=bet(this.id)>0</div>
+            </div>
+            <div class="midlGamePlaceBlock">
+                <div id="accountAmount">
+                    <div id="accountAmountBlock">
+                        <div id="accountAmountText">Ваш баланс: </div>
+                        <div id="money">0</div>
+                    </div>
+                    <button id="donatBtn" onclick="refill()">
+                        Пополнить
+                    </button>
+                </div>
+                <div id="cellBox"></div>
+                <div id="minorBlock">
+                    <div id="firstStringMinorBlock">
+                        <div id="firstTwelve" class="cell greenCell" onclick=bet(this.id)></div>
+                        <div id="secondTwelve" class="cell greenCell" onclick=bet(this.id)></div>
+                        <div id="thirdTwelve" class="cell greenCell" onclick=bet(this.id)></div>
+                    </div>
+                    <div id="secondStringMinorBlock">
+                        <div id="oneToEighteen" class="cell greenCell" onclick=bet(this.id)></div>
+                        <div id="even" class="cell greenCell" onclick=bet(this.id)></div>
+                        <div class="cell greenCell">
+                            <div id="redCell" class="cell" onclick=bet(this.id)></div>
+                        </div>
+                        <div class="cell greenCell">
+                            <div id="blackCell" class="cell" onclick=bet(this.id)></div>
+                        </div>
+                        <div id="notEven" class="cell greenCell" onclick=bet(this.id)></div>
+                        <div id="nineteenToThirtySix" class="cell greenCell" onclick=bet(this.id)></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightGamePlaceBlock">
+                <div style="margin-top: 37px;">
+                    <div id="firstTwoToOne" class="cell greenCell greenCellTwoToOne" onclick=bet(this.id)></div>
+                    <div id="secondTwoToOne" class="cell greenCell greenCellTwoToOne" onclick=bet(this.id)></div>
+                    <div id="thirdTwoToOne" class="cell greenCell greenCellTwoToOne" onclick=bet(this.id)></div>
+                </div>
+            </div>
+        </div>
+        <!-- <div id="inputWheelInGame"></div> -->
+    </div>
+    <div id="messagesPlace">
+        <div id="sessionResultPlace">
+            <div id="sessionResultContent">
+                <p>Результат сесии:</p>
+                <div>
+                    <div id="upOrDownArrow">
+                        <div id="plusResult">&#9206;</div>
+                        <div id="minusResult">&#9207;</div>
+                    </div>
+                    <div id="sessionResult">0</div>
+                </div>
+            </div>
+        </div>
+        <div id="chatWithInfoAboutBet">
+            <div id="headerChat">Информация о ставках:</div>
+            <div id="contentChat"></div>
+        </div>
+    </div>
+    <div id="modalWindow"></div>
+</body>
+<script src="index.js"></script>
+</html>

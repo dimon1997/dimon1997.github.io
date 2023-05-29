@@ -1,0 +1,604 @@
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: radial-gradient(circle at 39% 57.5%, #035e04 0%, #035e04 90%)
+            /* background-image: url(image/background_green.jpg); */
+
+    }
+
+    button {
+        width: auto;
+        margin-top: 4px; 
+    /* height: 26px; */
+    background-color: #dee5e0;
+    /* border: 4px; */
+    border-radius: 5px;
+    border-top-color: darkgray;
+    border-left-color: darkgray;
+    padding: 2px 8px 2px 8px;
+    box-shadow: 2px 1px 3px black;
+    cursor: pointer;
+    color: grey;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+
+    }
+
+    #gamePlace {
+        width: 1035px;
+        height: 330px;
+        padding: 108px 40px 45px 110px;
+        /* border-radius: 44%; */
+        /* background-color: green; */
+        display: flex;
+    }
+
+    .leftGamePlaceBlock {
+        height: 312px;
+        width: 72px;
+    }
+
+    .midlGamePlaceBlock {
+        min-width: 888px;
+        height: 312px;
+    }
+
+    .rightGamePlaceBlock {
+        width: 68px;
+        height: 312px;
+    }
+
+
+    /* GAME PLACE */
+    .cell {
+        border: 1px solid aliceblue;
+        font-weight: 600;
+        color: aliceblue;
+        cursor: pointer;
+    }
+
+    .cell:hover {
+        background-color: rgb(104, 102, 100);
+        opacity: 0.99;
+    }
+
+    #cellBox {
+        display: flex;
+        width: 100%;
+    }
+
+    .zero {
+        display: flex;
+        margin-top: 37px;
+        height: 221px;
+        min-width: 70px;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        border-radius: 45% 0% 0% 45%;
+    }
+
+
+
+    .cellNumber {
+        display: flex;
+        width: 72px;
+        height: 72px;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .redCell {
+        background-color: #c72510;
+    }
+
+    .blackCell {
+        background-color: #161611;
+    }
+
+    .greenCellTwoToOne {
+        font-size: 18px;
+        height: 72px;
+        width: 72px;
+    }
+
+    /* GAME PLACE */
+
+
+    /* MINOR BLOCK */
+    #minorBlock {
+        height: 74px;
+        width: 100%;
+    }
+
+    /* #minorBlock div {
+        display: flex;
+    } */
+
+    #firstStringMinorBlock {
+        display: flex;
+
+        height: 35px;
+
+    }
+
+    #firstStringMinorBlock>div {
+        width: 294px;
+    }
+
+    #secondStringMinorBlock {
+        display: flex;
+        height: 35px;
+
+    }
+
+    #secondStringMinorBlock>div {
+        width: 146px;
+    }
+
+    #redCell {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(223, 10, 10);
+    }
+
+    #blackCell {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(14, 13, 13);
+    }
+
+
+    /* MINOR BLOCK */
+
+    .greenCell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: green; */
+        border: 1px solid aliceblue;
+        color: aliceblue;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    /* accountAmount */
+    #accountAmount {
+        display: flex;
+        justify-content: center;
+        height: 35px;
+        width: 100%;
+        color: aliceblue;
+        font-weight: 600;
+        border: 1px solid aliceblue;
+        color: white;
+        text-shadow: 1px 2px 2px black;
+
+    }
+
+    #accountAmountBlock {
+        display: flex;
+        width: 220px;
+        padding: 2px 5px 2px 5px;
+
+    }
+
+    #accountAmountText {
+        margin-top: 5px;
+        width: 95px;
+
+    }
+
+    #money {
+        width: 105px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        background-color: #dee5e0;
+        border-radius: 5px;
+        border: 1.5px solid grey;
+        margin-top: 2px;
+        margin-left: 8px;
+        font-size: 22px;
+        color: #858181;
+        text-shadow: 1px 1px 2px black;
+        box-shadow: 1px 1px 2px black;
+    }
+
+    #donatBtn {
+        margin-top: 4px;
+        height: 26px;
+        /* background-color: bisque;
+        border-radius: 5px;
+        border: 2px solid rgb(190, 155, 108);
+        padding: 2px 5px 2px 5px;
+        cursor: pointer; */
+
+    }
+
+    /* accountAmount */
+
+    /* My Bet */
+    .myBet {
+        width: 50px;
+        height: 50px;
+        box-shadow: 5px 3px 4px #302f2f99;
+        border-radius: 50%;
+        border: dashed rgb(16, 15, 88);
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+    }
+
+    .myBet div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(24 23 114);
+        font-size: 18px;
+    }
+
+
+
+    /* MessagesPlace */
+    #messagesPlace {
+        display: flex;
+        margin-top: 25px;
+        padding-left: 80px;
+    }
+
+    /* MessagesPlace */
+
+    /* Chat with info about bet */
+    #chatWithInfoAboutBet {
+        min-width: 892px;
+        height: 280px;
+        background: #cac8c8;
+        margin-left: auto;
+        margin-right: 340px;
+        border: 2px solid;
+        border-radius: 7px;
+        border-top-color: darkgray;
+        border-left-color: darkgray;
+        box-shadow: 1px 1px 9px black;
+    }
+
+    #headerChat {
+        height: 25px;
+        background-color: #a8a4a4;
+        padding-top: 4px;
+        padding-left: 8px;
+        font-weight: 700;
+        color: black;
+        text-shadow: 1px 1px 2px grey;
+        font-size: 20px;
+    }
+
+    .chatTextWarning {
+        color: red;
+        font-weight: 600;
+    }
+
+    .chatTextNormal {
+        color: black;
+    }
+
+    #messageInChat {
+        display: flex;
+        border: 1px solid lightgrey;
+        padding: 2px 0px 1px 12px;
+        height: auto;
+        background-color: #f3eded;
+        border-radius: 0px 5px 5px 5px;
+        width: 97%;
+        margin-left: 5px;
+        margin-top: 3px;
+        font-size: 15px;
+        font-weight: 600;
+        /* color: #3a3838; */
+    }
+
+    #messageInChat>p {
+        margin-left: 5px;
+    }
+
+    #contentChat {
+        overflow: auto;
+        height: 254px;
+    }
+
+    /* Chat with info about bet */
+
+    /* App */
+    #wrapperGamePlace {
+        display: flex;
+        /* background-image: url(image/background_texture.jpg); */
+    }
+
+    /* App */
+
+    /* WHEEL STYLE */
+    #inputWheelInGame {
+        padding-top: 45px;
+        padding-left: 45px;
+    }
+
+    #wheelPlaceBorder {
+        height: 431px;
+        width: 431px;
+        padding: 6px;
+        border-radius: 17%;
+        background: linear-gradient(to bottom right, #a7902e 0%, #efec91 100%) border-box;
+    }
+
+    #wheelPlace {
+        width: 400px;
+        height: 400px;
+        padding: 15px;
+        border-radius: 75px;
+        background-image: url(image/background_table_texture.jpg);
+    }
+
+    #wheelPlace img {
+        width: 400px;
+
+    }
+
+    #wheel {
+        transition: transform 15s;
+    }
+
+    #ball {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        z-index: 100;
+        top: 192px;
+        left: 258px;
+        box-shadow: 2px 2px 3px;
+        border: gray 0.1px solid;
+
+
+    }
+
+    /* WHEEL STYLE */
+
+
+    /* HEADER AND TIMER */
+
+    #headerAndTimerBlock {
+        height: 45px;
+        background-color: #035e04;
+        display: flex;
+        padding-left: 650px;
+        align-items: center;
+        border-bottom: 1px solid white;
+        box-shadow: -2px 1px 6px #cbd1cc;
+    }
+
+    #welcomeMessage {
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        text-shadow: 1px 2px 2px black;
+        display: block;
+    }
+
+
+    #timerSpin {
+        display: none;
+    }
+
+    #timerSpin div {
+        display: flex;
+    }
+
+    #timerSpin div:nth-child(1) {
+        font-size: 25px;
+        color: black;
+        font-weight: 400;
+        margin-right: 15px;
+        color: white;
+    }
+
+    #timerSpin div:nth-child(2) {
+        margin-right: 15px;
+        color: #c11010;
+        font-size: 25px;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px black;
+        justify-content: center;
+
+    }
+
+    /* #timerSpin div:nth-child(3) {} */
+
+    #timer {
+        width: 130px;
+        height: 25px;
+        color: white;
+    }
+
+    #waitingResult {
+        width: 100%;
+        font-size: 25px;
+        display: none;
+        color: white;
+        text-shadow: 1px 2px 2px black;
+    }
+
+
+    /* HEADER AND TIMER */
+
+    /* MODAL WINDOW */
+
+    #modalWindow {
+        display: none;
+    }
+
+    #modal {
+        position: fixed;
+        z-index: 101;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    #modalContent {
+        background-color: #fefefe;
+        margin: 15% auto;
+        border: 1px solid #888;
+        width: 474px;
+        height: 222px;
+    }
+
+    #btncloseModal {
+        float: right;
+    font-size: 21px;
+    font-weight: bold;
+    height: 25px;
+    width: 25px;
+    margin-top: 3px;
+    margin-right: 3px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    }
+
+    #btncloseModal:hover,
+    #ccloseModal:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #headerModal {
+        height: 14%;
+        background-color: #a8a4a4;
+    }
+
+    #mainModal {
+        height: 90%;
+        background-color: #cac8c8;
+    }
+
+    #messageModal {
+        padding-top: 7%;
+        text-align: center;
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-size: 20px;
+        text-shadow: 0px 1px 2px #000000;
+        color: #484646;
+    }
+
+    #inputModal {
+        margin-left: 25%;
+        width: 234px;
+        height: 28px;
+        font-size: 30px;
+        background-color: #dee5e0;
+        color: #858181;
+        text-shadow: 1px 2px 2px black;
+        padding: 2px 2px 2px 8px;
+        border-radius: 5px;
+        border-color: #cbbebe;
+        text-align: center;
+        box-shadow: 1px 1px 2px black;
+    }
+
+    #rangeBlock {
+        padding-left: 118px;
+        padding-top: 6px;
+    }
+
+    #rangeBlock input {
+        width: 240px;
+    }
+
+    #btnModal {
+        margin-top: 20px;
+        margin-left: 180px;
+        height: 26px;
+    }
+
+    /* MODAL WINDOW */
+    
+    #sessionResultContent>p {
+        padding-top: 80px;
+        text-align: center;
+        color: black;
+        font-weight: 600;
+        font-size: 28px;
+        text-shadow: 0px 1px 2px black;
+    }
+
+    #sessionResultPlace {
+        min-width: 360px;
+        height: 280px;
+        background-color: #cac8c8;
+        border: 2px solid;
+        border-radius: 7px;
+        border-top-color: darkgray;
+        border-left-color: darkgray;
+        box-shadow: 1px 1px 9px black;
+    }
+
+    #sessionResultContent>div {
+        display: flex;
+        justify-content: center;
+        /* margin-top: 15px; */
+    }
+
+    #upOrDownArrow {
+        /* margin-left: 85px; */
+        width: 45px;
+    }
+
+    #upOrDownArrow>div {
+        height: 25px;
+        width: 25px;
+        color: grey;
+        font-size: 47px;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    /* #plusResult {
+        
+    } */
+
+    /* #minusResult {
+
+    } */
+    #sessionResult {
+        font-size: 50px;
+        font-weight: 600;
+        color: grey;
+        text-shadow: 1px 2px 2px black;
+        padding-top: 20px;
+    }
